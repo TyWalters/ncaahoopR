@@ -193,7 +193,7 @@ get_pbp_game <- function(game_ids, extra_parse = T) {
     ### Get City, State
     locate <- game_info[grep("^([^,]+), ([A-Z]{2})", game_info)]
     if(length(locate) > 0) {
-      locate <- gsub("\t", "", locate)
+      locate <- gsub("\t", "", locate)[[1]]
     } else {
       locate <- NA
     }
